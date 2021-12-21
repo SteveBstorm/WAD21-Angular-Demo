@@ -10,7 +10,7 @@ export class PipeDemoComponent implements OnInit {
 
   public product : Iproduct = { 
     name : "gel hydroalcoholique",
-    price : 19.99,
+    price : 19.10,
     quantity : 1}
 
   constructor() { }

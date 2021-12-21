@@ -7,6 +7,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit, OnDestroy {
 
+  public message : string = "Salut les ";
+  public students : string = "Wad";
+  public compteur : number = 0;
+  public validate : boolean = false;
+
+
   constructor() { }
   
 //Le ngOnDestroy provient de l'interface OnDestroy et sera exécuté lors du déchargement du component  
@@ -18,4 +24,11 @@ export class HelloWorldComponent implements OnInit, OnDestroy {
     alert("toto");
   }
 
+  AddOne(qty :number): void{
+    this.compteur += qty;
+  }
+
+  saveStudents():void{
+    this.validate = !this.validate
+  }
 }

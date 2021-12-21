@@ -1,2 +1,7 @@
 <h1>hello-world works!</h1>
-<h3>Hello les WAD!</h3>
+<h3>{{message}}{{students}}!</h3>
+<input type="text" [(ngModel)]="students" [hidden]="validate">
+<input type="button" value="save" (click)="saveStudents()">
+
+<div>Compteur : {{compteur}}</div>
+<input type="button" value="+" (click)="AddOne(1)" (dblclick)="AddOne(10)">

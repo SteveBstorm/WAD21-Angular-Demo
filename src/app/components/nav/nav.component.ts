@@ -1,4 +1,3 @@
-import { LiteralMapEntry } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Lien } from 'src/app/models/lien.model';
 
@@ -10,14 +9,29 @@ import { Lien } from 'src/app/models/lien.model';
 export class NavComponent implements OnInit {
 
   listeLien : Lien[] = [
-    {nom : "Demo bindings", url :"demo_01"},
-    {nom : "Demo Pipes", url :"demo_02"},
-    {nom : "Demo Directives", url :"demo_03"}
-  ]
+    {nom : "Démos", children : [
+      {nom : "Demo bindings", url :"demo/demo_01"},
+      {nom : "Demo Pipes", url :"demo/demo_02"},
+      {nom : "Demo Directives", url :"demo/demo_03"}
+    ]},
+    {nom : "Exercices", children : [
+      {nom : "Exercice 1", url : "exo1"},
+      {nom : "Exercice 2", url : "exo2"},
+    ]},
+
+    {nom : "Home", url : "home"}
+   //valeur par défaut :
+   //{nom : "toto", url:"", isChildrenVisible : false, children : []}    
+  ] 
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  switchCategoryVisible(index : number) {
+    this.listeLien[index].isChildrenVisible = !this.listeLien[index].isChildrenVisible
   }
 
 }

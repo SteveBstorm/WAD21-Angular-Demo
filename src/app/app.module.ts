@@ -8,6 +8,7 @@ import { HelloWorldComponent } from './components/hello-world/hello-world.compon
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { ToFahrenheitPipe } from './pipes/to-fahrenheit.pipe';
 import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DirectiveDemoComponent } from './components/directive-demo/directive-de
     HelloWorldComponent,
     PipeDemoComponent,
     ToFahrenheitPipe,
-    DirectiveDemoComponent
+    DirectiveDemoComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

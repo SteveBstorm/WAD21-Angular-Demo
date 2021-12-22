@@ -23,7 +23,8 @@
 
 <h4>*NGSWITCH</h4>
 
-<input [(ngModel)]="maVariable" />
+<input type="text" [(ngModel)]="maVariable" />
+<p>{{maVariable}}</p>
 
 <div [ngSwitch]="maVariable">
     <div *ngSwitchCase="1">Bonjour</div>
